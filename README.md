@@ -1,5 +1,5 @@
-#PS1 
-# Task 1
+#  ---------------------- PS1 ---------------------- 
+#  ---------------------- Task 1 ---------------------- 
 
 # Pure LSTM Stock Forecast (7-Day)
 
@@ -97,7 +97,7 @@ This is a learning and experimentation project, not financial advice.
 * Ability to build an end-to-end ML pipeline
 
 
-# Task 2
+#  ---------------------- Task 2 ---------------------- 
 
 🇮🇳 Indian Stock Market AI Assistant
 
@@ -253,7 +253,7 @@ To understand Indian stock market data
 
 To mix AI + real-world applications
 
-# TASK 3
+#  ---------------------- TASK 3 ---------------------- 
 
 📈 Hybrid Live Stock Prediction Engine (PyTorch + Yahoo Finance)
 
@@ -432,188 +432,8 @@ If you want to improve this later:
 
 📉 Direction-only prediction logic
 
-
-# Task 3
-
-📈 Hybrid Live Stock Prediction Engine (PyTorch + Yahoo Finance)
-
-Hey!
-This project is a live stock price prediction system built with PyTorch and Yahoo Finance data. It mixes long-term daily trends with short-term minute-by-minute movements using a hybrid LSTM model.
-
-In simple words:
-👉 One model looks at the big picture
-👉 Another model looks at what’s happening right now
-👉 A hybrid model combines both to predict the next minute
-
-🚀 What This Project Does
-
-📊 Downloads 2 years of daily stock data
-
-⏱ Downloads last 6 days of 1-minute data
-
-🧠 Trains two separate LSTM models
-
-Daily LSTM → long-term trend
-
-Minute LSTM → short-term momentum
-
-🔗 Combines both using a hybrid model
-
-🔮 Predicts:
-
-Next 7 days using the daily model
-
-Live 1-minute price using the hybrid model
-
-🔁 Runs in a loop and updates every minute
-
-🧩 Model Architecture (High Level)
-
-Daily Model
-
-Input: last 60 trading days
-
-Output: next day close (normalized)
-
-Minute Model
-
-Input: last 60 minutes
-
-Output: next minute close (normalized)
-
-Hybrid Model
-
-Uses pretrained LSTM layers from both models
-
-Freezes them
-
-Trains a small neural network on top
-
-This keeps training fast and stable 👍
-
-📂 Project Flow (Step by Step)
-
-Download data
-
-Daily (2 years, 1D)
-
-Minute (last 6 days, 1m)
-
-Normalize data
-
-Daily and minute data are normalized separately
-
-Create datasets
-
-Sliding windows for time series learning
-
-Train models
-
-Train daily LSTM
-
-Train minute LSTM
-
-7-day forecast
-
-Uses only the daily model
-
-Train hybrid model
-
-Daily + minute LSTMs frozen
-
-Live prediction
-
-Every minute:
-
-Fetch new data
-
-Predict next close
-
-Update rolling window
-
-Save minute data to CSV
-
-⚙️ Configuration You Can Change
-
-At the top of the file:
-
-TICKER = "AAPL"        # Stock symbol
-SEQ_LEN_MIN = 60       # Minutes used for prediction
-SEQ_LEN_DAY = 60       # Days used for prediction
-EPOCHS = 8             # Training epochs
-BATCH_SIZE = 32
-
-
-Want to predict a different stock?
-Just change "AAPL" to something else like "MSFT" or "TSLA".
-
-🖥️ Requirements
-
-Make sure you have these installed:
-
-pip install yfinance torch pandas numpy
-
-
-Optional but recommended:
-
-GPU with CUDA for faster training
-
-📄 Output Files
-
-minute_database.csv
-
-Stores minute-by-minute data
-
-Used as a rolling window for live prediction
-
-⚠️ Important Notes
-
-This is not financial advice
-
-Yahoo Finance minute data can:
-
-Have small delays
-
-Occasionally skip minutes
-
-The model predicts directional behavior, not guaranteed prices
-
-Live predictions depend heavily on market conditions
-
-🧪 Good Use Cases
-
-Learning time-series forecasting
-
-Practicing LSTM + PyTorch
-
-Building a base for:
-
-Alerts
-
-Dashboards
-
-Trading simulations
-
-Portfolio / research projects
-
-🔮 Possible Upgrades (Next Steps)
-
-If you want to improve this later:
-
-🔔 Add price-difference alerts
-
-📊 Add a Streamlit dashboard
-
-🧠 Add confidence or uncertainty estimation
-
-⏱ Add alert cooldowns
-
-🔁 Add automatic retraining
-
-📉 Direction-only prediction logic
-
-# PS2
-# Task 1
+# ---------------------- PS2 ---------------------- 
+#  ---------------------- Task 1 ---------------------- 
 
 🇮🇳 Indian Stock Market AI Assistant
 
